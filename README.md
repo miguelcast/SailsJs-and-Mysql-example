@@ -38,3 +38,8 @@ $ cd /you/path/project/
 $ sails new crudUser
 $ cd crudUser
 ```
+Now lift the server and after you visit http://localhost:1337/:
+```sh
+$ sails lift
+```
+![serve](https://github.com/miguelcast/SailsJs-and-Mysql-example/blob/master/20160630-091611_capture.gif)
