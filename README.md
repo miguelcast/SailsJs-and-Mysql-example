@@ -56,4 +56,22 @@ Download Mysql from this url [MySql](http://dev.mysql.com/downloads/mysql/).
 
 You can see the documentation for settings Mysql.
 
-
+```sql
+CREATE DATABASE test;
+```
+Create table of users:
+```sql
+CREATE TABLE `test`.`users` (
+  `id` INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  `firstName` VARCHAR(45) NOT NULL DEFAULT '',
+  `lastName` VARCHAR(45) NOT NULL DEFAULT '',
+  `email` VARCHAR(100) NOT NULL DEFAULT '',
+  `phone` VARCHAR(30) NOT NULL DEFAULT '',
+  `address` VARCHAR(80) NOT NULL DEFAULT '',
+  `createdData` DATETIME NOT NULL DEFAULT 0,
+  `updateDate` TIMESTAMP NOT NULL DEFAULT 0,
+  PRIMARY KEY(`id`)
+)
+ENGINE = InnoDB
+CHARACTER SET utf8;
+```
