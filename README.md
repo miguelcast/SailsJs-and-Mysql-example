@@ -75,3 +75,25 @@ CREATE TABLE `test`.`users` (
 ENGINE = InnoDB
 CHARACTER SET utf8;
 ```
+### Let's Integrate Sails and Mysql
+
+MySQL adapter for the Sails framework and Waterline ORM. Install from npm sails-mysql:
+```sh
+$ npm install --save sails-mysql
+```
+setting MySql on SailsJs, add the next code into config/connections.js:
+```js
+  mysqlTest: {
+    adapter: 'sails-mysql',
+    host: 'localhost',
+    user: 'root', //optional
+    password: 'root', //optional
+    database: 'test' //optional
+  }
+```
+and change settings on config/models.js:
+```js
+  connection: 'mysqlTest',
+  migrate: 'safe',
+  schema: true
+```
